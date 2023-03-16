@@ -1,0 +1,371 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+  position: relative;
+}
+ul a {
+  color: hsl(0, 0%, 41%);
+  font-size: 16px;
+}
+a:hover {
+  color: hsl(0, 0%, 8%);
+}
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: hsl(0, 0%, 8%);
+}
+p {
+  padding-right: 50px;
+  line-height: 1.5rem;
+  color: hsl(0, 0%, 41%);
+}
+button {
+  border: 1px solid hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 8%);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: hsl(0, 0%, 98%);
+  cursor: pointer;
+  margin-top: 20px;
+  position: relative;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+}
+
+.left-nav {
+  display: flex;
+  position: absolute;
+  right: 5%;
+}
+
+.brand-logo {
+  margin-right: 50px;
+}
+
+.main-menu {
+  display: flex;
+  gap: 0.5em;
+}
+
+.main-menu li {
+  padding: 5px 14px;
+}
+.features,
+.company {
+  position: relative;
+}
+
+.dropdown {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1em 0em;
+  position: absolute;
+  display: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.features .dropdown {
+  right: 20px;
+  padding: 1em 1em;
+}
+.company .dropdown {
+  padding: 0.5em 1em;
+  width: 10em;
+}
+.dropdown img {
+  margin-right: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 10em;
+}
+
+.features:hover .dropdown {
+  display: block;
+}
+.company:hover .dropdown {
+  display: block;
+}
+
+.icon-menu,
+.menu-close {
+  display: none;
+}
+.register-button {
+  background-color: inherit;
+  font-size: 15px;
+  color: hsl(0, 0%, 41%);
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 10px;
+  padding: 10px;
+  width: 90px;
+  height: 40px;
+  margin-top: 0;
+  margin-left: 30px;
+  position: absolute;
+  top: -20%;
+  cursor: pointer;
+}
+.left-nav .login {
+  position: relative;
+  right: 100%;
+}
+.register-button:hover {
+  border-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+}
+.page {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 40px; */
+  gap: 5em;
+  padding: 0 40px 0 40px;
+}
+
+.page-content {
+  padding: 0 90px;
+}
+
+.page-image img {
+  width: 80%;
+}
+.brand-supported {
+  position: absolute;
+  top: 92%;
+  left: 10%;
+}
+.brand-supported img {
+  margin-left: 20px;
+}
+
+.hidden {
+  display: none;
+}
+.h1-mob {
+  display: none;
+}
+.image-mobile {
+  display: none;
+}
+@media screen and (max-width: 765px) {
+  nav {
+    position: static;
+    margin-bottom: 0;
+  }
+  .main-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 35%;
+    top: 0;
+    bottom: 0;
+    padding: 20px 0;
+    padding-top: 50px;
+    background-color: hsl(0, 0%, 98%);
+    z-index: 3;
+  }
+  .main-menu li:hover {
+    display: inline-block;
+    transition: 0.3 ease;
+  }
+  .main-menu li {
+    margin-top: 12px;
+  }
+
+  .icon-menu {
+    display: grid;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+  }
+  .menu-close {
+    display: none;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    z-index: 4;
+  }
+
+  .left-nav {
+    display: grid;
+    position: static;
+    place-items: center;
+  }
+  .left-nav .login {
+    display: block;
+    position: static;
+    margin-top: 20px;
+  }
+  .register-button {
+    display: block;
+    position: static;
+    padding: 10px;
+    width: 80%;
+    margin: 0;
+    top: 0%;
+    margin-top: 10px;
+  }
+  .dropdown {
+    background-color: inherit;
+    position: static;
+  }
+
+  .features .dropdown {
+    display: none;
+  }
+  .features:hover .dropdown {
+    display: none;
+  }
+  .page {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    padding: 0;
+  }
+  h1 {
+    display: none;
+  }
+  .h1-mob {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+  }
+  p {
+    padding-right: 0;
+    line-height: 1.5rem;
+    color: hsl(0, 0%, 41%);
+  }
+  .page-content {
+    display: block;
+    padding: 5px;
+    margin-top: 10rem;
+    text-align: center;
+  }
+
+  .page-image {
+    display: none;
+  }
+  .image-mobile {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+  }
+  .image-mobile img {
+    /* width: 300px; */
+    /* width: 80%; */
+    width: 100%;
+  }
+  .brand-supported {
+    position: absolute;
+    top: 91%;
+    left: 0%;
+    right: 0;
+  }
+  .brand-supported img {
+    margin-left: 20px;
+    width: 15%;
+  }
+}
+
+@media screen and (min-width: 485px) and (max-width: 765px) {
+  .page {
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+  .image-mobile {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+  }
+  .h1-mob {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+  p {
+    padding-right: 10px;
+    line-height: 1.5rem;
+    color: hsl(0, 0%, 41%);
+  }
+  .page-content {
+    display: block;
+    padding: 5px;
+    margin-top: 15rem;
+    text-align: center;
+  }
+  .image-mobile img {
+    width: 500px;
+    /* width: 80%; */
+    /* height: auto; */
+  }
+  .brand-supported {
+    position: absolute;
+    top: 91%;
+    left: 5%;
+    right: 0%;
+  }
+  .brand-supported img {
+    margin-left: 20px;
+    width: 18%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .features:hover .f-arrow-up {
+    display: inline;
+  }
+  .features:hover .f-arrow-down {
+    display: none;
+  }
+  .company:hover .c-arrow-up {
+    display: inline;
+  }
+  .company:hover .c-arrow-down {
+    display: none;
+  }
+}
